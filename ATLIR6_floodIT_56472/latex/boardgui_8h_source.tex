@@ -1,0 +1,24 @@
+\hypertarget{boardgui_8h_source}{}\doxysection{boardgui.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ BOARDGUI\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ BOARDGUI\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <QTableWidget>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QPainter>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}couleur.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}observer.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{keyword}{using\ namespace\ }model;}
+\DoxyCodeLine{00008\ \textcolor{keyword}{using\ namespace\ }nvs;}
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classboard_g_u_i}{boardGUI}}\ :\ \textcolor{keyword}{public}\ QTableWidget,\ \textcolor{keyword}{public}\ nvs::Observer}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{classboard_g_u_i}{boardGUI}}(\textcolor{keywordtype}{int}\ row,\textcolor{keywordtype}{int}\ color);}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{classboard_g_u_i}{\string~boardGUI}}()\textcolor{keyword}{override};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classboard_g_u_i_ac16bd2c92e3747b13bc78eb739fec12a}{Update}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_subject}{Subject}}\ *\ subject)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00025\ \};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ BOARDGUI\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,9 @@
+
+nombre de coups : 2
+nombre de coups : 4
+nombre de coups : 8
+nombre de coups : 18
+nombre de coups : 4
+nombre de coups : 9
+nombre de coups : 16
+nombre de coups : 20

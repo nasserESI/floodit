@@ -1,0 +1,179 @@
+\hypertarget{class_subject}{}\doxysection{Subject Class Reference}
+\label{class_subject}\index{Subject@{Subject}}
+
+
+Basic class of any \char`\"{}subject of observation\char`\"{}.  
+
+
+
+
+{\ttfamily \#include $<$subject.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_subject_af9723476c61afcceeb91bee3211258c7}\label{class_subject_af9723476c61afcceeb91bee3211258c7}} 
+virtual {\bfseries $\sim$\+Subject} ()=default
+\begin{DoxyCompactList}\small\item\em Destructeur virtuel par défaut car utilisation polymorphique. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_subject_ac35c75fca7932fc8f990d70b0613abcd}{Subject}} (const \mbox{\hyperlink{class_subject}{Subject}} \&)=default
+\begin{DoxyCompactList}\small\item\em Constructeur par recopie par défaut. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_subject_a4d3e92911f118d9162c0ce23eabc02a7}{Subject}} (\mbox{\hyperlink{class_subject}{Subject}} \&\&)=default
+\begin{DoxyCompactList}\small\item\em Constructeur par déplacement par défaut. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_subject}{Subject}} \& \mbox{\hyperlink{class_subject_ae39d6b324ebe925c6f0ae6f83e556e5b}{operator=}} (const \mbox{\hyperlink{class_subject}{Subject}} \&)=default
+\begin{DoxyCompactList}\small\item\em Opérateur d\textquotesingle{}assignation par recopie par défaut. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_subject}{Subject}} \& \mbox{\hyperlink{class_subject_a968d6b3d52c11a66c80eaabd1b2f29d0}{operator=}} (\mbox{\hyperlink{class_subject}{Subject}} \&\&)=default
+\begin{DoxyCompactList}\small\item\em Opérateur d\textquotesingle{}assignation par déplacement par défaut. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_subject_aff130a6206b57a4b68924befb5d6fcf4}{register\+Observer}} (\mbox{\hyperlink{class_observer}{Observer}} $\ast$observer) final
+\begin{DoxyCompactList}\small\item\em Méthode permettant à un observateur de s\textquotesingle{}enregistrer comme écouteur du sujet d\textquotesingle{}observation. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_subject_ae5f6ef751d4a41c5b0c3c36b48417fd9}{unregister\+Observer}} (\mbox{\hyperlink{class_observer}{Observer}} $\ast$observer) final
+\begin{DoxyCompactList}\small\item\em Méthode permettant à un observateur de se retirer de la liste des écouteurs patentés du sujet d\textquotesingle{}observation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_subject_ab4f33719b83034be37c7f8223f1a5e63}\label{class_subject_ab4f33719b83034be37c7f8223f1a5e63}} 
+{\bfseries Subject} ()=default
+\begin{DoxyCompactList}\small\item\em Constructeur protégé pour éviter l\textquotesingle{}instanciation hors héritage. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_subject_a5e8b668154794295dc205427d14b8d91}{notify\+Observers}} () const final
+\begin{DoxyCompactList}\small\item\em Méthode qui se charge de prévenir les observateurs d\textquotesingle{}un changement d\textquotesingle{}état du sujet d\textquotesingle{}observation, en invoquant leur méthode Observer\+::update(). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_subject_afd3df5fd2eb3f169980fe40f5eacf5c5}\label{class_subject_afd3df5fd2eb3f169980fe40f5eacf5c5}} 
+std\+::set$<$ \mbox{\hyperlink{class_observer}{Observer}} $\ast$ $>$ {\bfseries observers\+\_\+} \{ \}
+\begin{DoxyCompactList}\small\item\em L\textquotesingle{}ensemble d\textquotesingle{}observateurs enregistrés. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Basic class of any \char`\"{}subject of observation\char`\"{}. 
+
+Class from which any event source (or \char`\"{}observation subject\char`\"{}) is derived of the \char`\"{}\+Observer / Observation\+Subject\char`\"{} design model. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_subject_ac35c75fca7932fc8f990d70b0613abcd}\label{class_subject_ac35c75fca7932fc8f990d70b0613abcd}} 
+\index{Subject@{Subject}!Subject@{Subject}}
+\index{Subject@{Subject}!Subject@{Subject}}
+\doxysubsubsection{\texorpdfstring{Subject()}{Subject()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Subject\+::\+Subject (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_subject}{Subject}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Constructeur par recopie par défaut. 
+
+Le destructeur virtuel par défaut a des effets en cascade.
+
+\begin{DoxySeeAlso}{See also}
+\href{http://stackoverflow.com/q/33957037}{\texttt{ http\+://stackoverflow.\+com/q/33957037}} 
+
+\href{http://scottmeyers.blogspot.de/2014/03/a-concern-about-rule-of-zero.html}{\texttt{ http\+://scottmeyers.\+blogspot.\+de/2014/03/a-\/concern-\/about-\/rule-\/of-\/zero.\+html}} 
+
+\href{https://blog.feabhas.com/2015/11/becoming-a-rule-of-zero-hero/}{\texttt{ https\+://blog.\+feabhas.\+com/2015/11/becoming-\/a-\/rule-\/of-\/zero-\/hero/}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_subject_a4d3e92911f118d9162c0ce23eabc02a7}\label{class_subject_a4d3e92911f118d9162c0ce23eabc02a7}} 
+\index{Subject@{Subject}!Subject@{Subject}}
+\index{Subject@{Subject}!Subject@{Subject}}
+\doxysubsubsection{\texorpdfstring{Subject()}{Subject()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Subject\+::\+Subject (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_subject}{Subject}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Constructeur par déplacement par défaut. 
+
+Le destructeur virtuel par défaut a des effets en cascade.
+
+\begin{DoxySeeAlso}{See also}
+\href{http://stackoverflow.com/q/33957037}{\texttt{ http\+://stackoverflow.\+com/q/33957037}} 
+
+\href{http://scottmeyers.blogspot.de/2014/03/a-concern-about-rule-of-zero.html}{\texttt{ http\+://scottmeyers.\+blogspot.\+de/2014/03/a-\/concern-\/about-\/rule-\/of-\/zero.\+html}} 
+
+\href{https://blog.feabhas.com/2015/11/becoming-a-rule-of-zero-hero/}{\texttt{ https\+://blog.\+feabhas.\+com/2015/11/becoming-\/a-\/rule-\/of-\/zero-\/hero/}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_subject_a5e8b668154794295dc205427d14b8d91}\label{class_subject_a5e8b668154794295dc205427d14b8d91}} 
+\index{Subject@{Subject}!notifyObservers@{notifyObservers}}
+\index{notifyObservers@{notifyObservers}!Subject@{Subject}}
+\doxysubsubsection{\texorpdfstring{notifyObservers()}{notifyObservers()}}
+{\footnotesize\ttfamily void Subject\+::notify\+Observers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Méthode qui se charge de prévenir les observateurs d\textquotesingle{}un changement d\textquotesingle{}état du sujet d\textquotesingle{}observation, en invoquant leur méthode Observer\+::update(). 
+
+\begin{DoxySeeAlso}{See also}
+Observer\+::update(const Subject $\ast$). 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_subject_ae39d6b324ebe925c6f0ae6f83e556e5b}\label{class_subject_ae39d6b324ebe925c6f0ae6f83e556e5b}} 
+\index{Subject@{Subject}!operator=@{operator=}}
+\index{operator=@{operator=}!Subject@{Subject}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_subject}{Subject}} \& Subject\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_subject}{Subject}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Opérateur d\textquotesingle{}assignation par recopie par défaut. 
+
+Le destructeur virtuel par défaut a des effets en cascade.
+
+\begin{DoxySeeAlso}{See also}
+\href{http://stackoverflow.com/q/33957037}{\texttt{ http\+://stackoverflow.\+com/q/33957037}} 
+
+\href{http://scottmeyers.blogspot.de/2014/03/a-concern-about-rule-of-zero.html}{\texttt{ http\+://scottmeyers.\+blogspot.\+de/2014/03/a-\/concern-\/about-\/rule-\/of-\/zero.\+html}} 
+
+\href{https://blog.feabhas.com/2015/11/becoming-a-rule-of-zero-hero/}{\texttt{ https\+://blog.\+feabhas.\+com/2015/11/becoming-\/a-\/rule-\/of-\/zero-\/hero/}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_subject_a968d6b3d52c11a66c80eaabd1b2f29d0}\label{class_subject_a968d6b3d52c11a66c80eaabd1b2f29d0}} 
+\index{Subject@{Subject}!operator=@{operator=}}
+\index{operator=@{operator=}!Subject@{Subject}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_subject}{Subject}} \& Subject\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_subject}{Subject}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Opérateur d\textquotesingle{}assignation par déplacement par défaut. 
+
+Le destructeur virtuel par défaut a des effets en cascade.
+
+\begin{DoxySeeAlso}{See also}
+\href{http://stackoverflow.com/q/33957037}{\texttt{ http\+://stackoverflow.\+com/q/33957037}} 
+
+\href{http://scottmeyers.blogspot.de/2014/03/a-concern-about-rule-of-zero.html}{\texttt{ http\+://scottmeyers.\+blogspot.\+de/2014/03/a-\/concern-\/about-\/rule-\/of-\/zero.\+html}} 
+
+\href{https://blog.feabhas.com/2015/11/becoming-a-rule-of-zero-hero/}{\texttt{ https\+://blog.\+feabhas.\+com/2015/11/becoming-\/a-\/rule-\/of-\/zero-\/hero/}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_subject_aff130a6206b57a4b68924befb5d6fcf4}\label{class_subject_aff130a6206b57a4b68924befb5d6fcf4}} 
+\index{Subject@{Subject}!registerObserver@{registerObserver}}
+\index{registerObserver@{registerObserver}!Subject@{Subject}}
+\doxysubsubsection{\texorpdfstring{registerObserver()}{registerObserver()}}
+{\footnotesize\ttfamily void Subject\+::register\+Observer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_observer}{Observer}} $\ast$}]{observer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
+
+
+
+Méthode permettant à un observateur de s\textquotesingle{}enregistrer comme écouteur du sujet d\textquotesingle{}observation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em observer} & un pointeur vers le candidat observateur. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_subject_ae5f6ef751d4a41c5b0c3c36b48417fd9}\label{class_subject_ae5f6ef751d4a41c5b0c3c36b48417fd9}} 
+\index{Subject@{Subject}!unregisterObserver@{unregisterObserver}}
+\index{unregisterObserver@{unregisterObserver}!Subject@{Subject}}
+\doxysubsubsection{\texorpdfstring{unregisterObserver()}{unregisterObserver()}}
+{\footnotesize\ttfamily void Subject\+::unregister\+Observer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_observer}{Observer}} $\ast$}]{observer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
+
+
+
+Méthode permettant à un observateur de se retirer de la liste des écouteurs patentés du sujet d\textquotesingle{}observation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em observer} & l\textquotesingle{}adresse de l\textquotesingle{}observateur désintéressé. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+subject.\+h\item 
+subject.\+cpp\end{DoxyCompactItemize}

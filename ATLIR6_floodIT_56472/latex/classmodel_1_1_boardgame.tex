@@ -1,0 +1,228 @@
+\hypertarget{classmodel_1_1_boardgame}{}\doxysection{model\+::Boardgame Class Reference}
+\label{classmodel_1_1_boardgame}\index{model::Boardgame@{model::Boardgame}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmodel_1_1_boardgame_af582c8f8720c66569cf763852b89faac}\label{classmodel_1_1_boardgame_af582c8f8720c66569cf763852b89faac}} 
+{\bfseries Boardgame} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classmodel_1_1_boardgame}{Boardgame}} constructeur de base. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmodel_1_1_boardgame_a90aced92377209f81e0c3a34efdaa17b}{Boardgame}} (int size, int couleur)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classmodel_1_1_boardgame}{Boardgame}}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classmodel_1_1_boardgame_a2156216faff78c2ea0fca60eb98d41a3}{get\+Number\+Of\+Attempt}} () const
+\begin{DoxyCompactList}\small\item\em get\+Number\+Of\+Attempt \+: donne le nombre de tentatives \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmodel_1_1_boardgame_a57be9688de23926c7fdfa8f48bfbe627}{initboard}} (int size, int couleur)
+\begin{DoxyCompactList}\small\item\em initboard \+: s\textquotesingle{}occupe de faire le travail du constructeur c\textquotesingle{}est à dire, crée des cases et les peindres en fonction de l\textquotesingle{}entier qui est associé à la couleur. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmodel_1_1_boardgame_a990b621352cb014333ace0de4d699084}{Update\+Color}} (int i, int j, int row, int column, Couleur new\+Color)
+\begin{DoxyCompactList}\small\item\em Update\+Color \+: prend cinq paramètres \+: i, j, row, col et new\+Color. Elle est appelée sur un objet de la classe \mbox{\hyperlink{classmodel_1_1_boardgame}{Boardgame}} et met à jour la couleur des cases du plateau de jeu à partir de la case de coordonnées (i,j). La nouvelle couleur à appliquer est passée en paramètre avec l\textquotesingle{}argument new\+Color. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmodel_1_1_boardgame_a8bc983f714af3e306362ec0b214bad6f}{update\+Board}} (\mbox{\hyperlink{classmodel_1_1_position}{Position}} $\ast$pos)
+\begin{DoxyCompactList}\small\item\em update\+Board cette méthode s\textquotesingle{}assure d\textquotesingle{}abord que la couleur séléctionné est bien différente de celle de la tâche ensuite elle fait appel à update\+Color et incrémente le nombre de tentative grace à \mbox{\hyperlink{classmodel_1_1_boardgame_a890b632c3f35ac532c05a59210c00565}{add\+Attempt()}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmodel_1_1_boardgame_a890b632c3f35ac532c05a59210c00565}\label{classmodel_1_1_boardgame_a890b632c3f35ac532c05a59210c00565}} 
+void {\bfseries add\+Attempt} ()
+\begin{DoxyCompactList}\small\item\em add\+Attempt incrémente le nombre de tentatives \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmodel_1_1_boardgame_a3287316789843fb61335c92b1a6e32e7}{set\+Colors}} (int colors)
+\begin{DoxyCompactList}\small\item\em set\+Colors permet d\textquotesingle{}installer une couleur pour une case. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmodel_1_1_boardgame_affe94fd1efc62c3390997f393a42d10f}{get\+Size}} () const
+\begin{DoxyCompactList}\small\item\em get\+Size donne la taille du plateau \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmodel_1_1_boardgame_ae81b80e26d53764c73a919757558df3e}{color}} () const
+\begin{DoxyCompactList}\small\item\em color retourne la couleur \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classmodel_1_1square}{square}} $>$ $>$ \mbox{\hyperlink{classmodel_1_1_boardgame_ac7b05f5f217f91e6c5e4cbd8094cb44f}{get\+Board}} () const
+\begin{DoxyCompactList}\small\item\em get\+Board retourne le tableau dynamique de couleur sous forme de tableau d\textquotesingle{}entier \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classmodel_1_1_boardgame_aa10cd485ef5225bc69e504bebec4ec26}{is\+Finished}} () const
+\begin{DoxyCompactList}\small\item\em is\+Finished regarde si toutes les cases ont la même couleur que celle en \mbox{[}0\mbox{]}\mbox{[}0\mbox{]} si c\textquotesingle{}est le cas c\textquotesingle{}est que le jeux est terminé \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_subject}{Subject}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_subject_af9723476c61afcceeb91bee3211258c7}\label{class_subject_af9723476c61afcceeb91bee3211258c7}} 
+virtual {\bfseries $\sim$\+Subject} ()=default
+\begin{DoxyCompactList}\small\item\em Destructeur virtuel par défaut car utilisation polymorphique. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_subject_ac35c75fca7932fc8f990d70b0613abcd}{Subject}} (const \mbox{\hyperlink{class_subject}{Subject}} \&)=default
+\begin{DoxyCompactList}\small\item\em Constructeur par recopie par défaut. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_subject_a4d3e92911f118d9162c0ce23eabc02a7}{Subject}} (\mbox{\hyperlink{class_subject}{Subject}} \&\&)=default
+\begin{DoxyCompactList}\small\item\em Constructeur par déplacement par défaut. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_subject}{Subject}} \& \mbox{\hyperlink{class_subject_ae39d6b324ebe925c6f0ae6f83e556e5b}{operator=}} (const \mbox{\hyperlink{class_subject}{Subject}} \&)=default
+\begin{DoxyCompactList}\small\item\em Opérateur d\textquotesingle{}assignation par recopie par défaut. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_subject}{Subject}} \& \mbox{\hyperlink{class_subject_a968d6b3d52c11a66c80eaabd1b2f29d0}{operator=}} (\mbox{\hyperlink{class_subject}{Subject}} \&\&)=default
+\begin{DoxyCompactList}\small\item\em Opérateur d\textquotesingle{}assignation par déplacement par défaut. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_subject_aff130a6206b57a4b68924befb5d6fcf4}{register\+Observer}} (\mbox{\hyperlink{class_observer}{Observer}} $\ast$observer) final
+\begin{DoxyCompactList}\small\item\em Méthode permettant à un observateur de s\textquotesingle{}enregistrer comme écouteur du sujet d\textquotesingle{}observation. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_subject_ae5f6ef751d4a41c5b0c3c36b48417fd9}{unregister\+Observer}} (\mbox{\hyperlink{class_observer}{Observer}} $\ast$observer) final
+\begin{DoxyCompactList}\small\item\em Méthode permettant à un observateur de se retirer de la liste des écouteurs patentés du sujet d\textquotesingle{}observation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_subject}{Subject}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_subject_ab4f33719b83034be37c7f8223f1a5e63}\label{class_subject_ab4f33719b83034be37c7f8223f1a5e63}} 
+{\bfseries Subject} ()=default
+\begin{DoxyCompactList}\small\item\em Constructeur protégé pour éviter l\textquotesingle{}instanciation hors héritage. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_subject_a5e8b668154794295dc205427d14b8d91}{notify\+Observers}} () const final
+\begin{DoxyCompactList}\small\item\em Méthode qui se charge de prévenir les observateurs d\textquotesingle{}un changement d\textquotesingle{}état du sujet d\textquotesingle{}observation, en invoquant leur méthode Observer\+::update(). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_subject}{Subject}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_subject_afd3df5fd2eb3f169980fe40f5eacf5c5}\label{class_subject_afd3df5fd2eb3f169980fe40f5eacf5c5}} 
+std\+::set$<$ \mbox{\hyperlink{class_observer}{Observer}} $\ast$ $>$ {\bfseries observers\+\_\+} \{ \}
+\begin{DoxyCompactList}\small\item\em L\textquotesingle{}ensemble d\textquotesingle{}observateurs enregistrés. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmodel_1_1_boardgame_a90aced92377209f81e0c3a34efdaa17b}\label{classmodel_1_1_boardgame_a90aced92377209f81e0c3a34efdaa17b}} 
+\index{model::Boardgame@{model::Boardgame}!Boardgame@{Boardgame}}
+\index{Boardgame@{Boardgame}!model::Boardgame@{model::Boardgame}}
+\doxysubsubsection{\texorpdfstring{Boardgame()}{Boardgame()}}
+{\footnotesize\ttfamily Boardgame\+::\+Boardgame (\begin{DoxyParamCaption}\item[{int}]{size,  }\item[{int}]{couleur }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classmodel_1_1_boardgame}{Boardgame}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & \\
+\hline
+{\em couleur} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmodel_1_1_boardgame_ae81b80e26d53764c73a919757558df3e}\label{classmodel_1_1_boardgame_ae81b80e26d53764c73a919757558df3e}} 
+\index{model::Boardgame@{model::Boardgame}!color@{color}}
+\index{color@{color}!model::Boardgame@{model::Boardgame}}
+\doxysubsubsection{\texorpdfstring{color()}{color()}}
+{\footnotesize\ttfamily int Boardgame\+::color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+color retourne la couleur 
+
+\begin{DoxyReturn}{Returns}
+retourne la couleur sous forme d\textquotesingle{}un entier qui lui corresponds 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmodel_1_1_boardgame_ac7b05f5f217f91e6c5e4cbd8094cb44f}\label{classmodel_1_1_boardgame_ac7b05f5f217f91e6c5e4cbd8094cb44f}} 
+\index{model::Boardgame@{model::Boardgame}!getBoard@{getBoard}}
+\index{getBoard@{getBoard}!model::Boardgame@{model::Boardgame}}
+\doxysubsubsection{\texorpdfstring{getBoard()}{getBoard()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classmodel_1_1square}{square}} $>$ $>$ Boardgame\+::get\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get\+Board retourne le tableau dynamique de couleur sous forme de tableau d\textquotesingle{}entier 
+
+\begin{DoxyReturn}{Returns}
+le vecteur 2d 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmodel_1_1_boardgame_a2156216faff78c2ea0fca60eb98d41a3}\label{classmodel_1_1_boardgame_a2156216faff78c2ea0fca60eb98d41a3}} 
+\index{model::Boardgame@{model::Boardgame}!getNumberOfAttempt@{getNumberOfAttempt}}
+\index{getNumberOfAttempt@{getNumberOfAttempt}!model::Boardgame@{model::Boardgame}}
+\doxysubsubsection{\texorpdfstring{getNumberOfAttempt()}{getNumberOfAttempt()}}
+{\footnotesize\ttfamily std\+::string Boardgame\+::get\+Number\+Of\+Attempt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get\+Number\+Of\+Attempt \+: donne le nombre de tentatives 
+
+\begin{DoxyReturn}{Returns}
+un entier représentant le nombre de tentatives 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmodel_1_1_boardgame_affe94fd1efc62c3390997f393a42d10f}\label{classmodel_1_1_boardgame_affe94fd1efc62c3390997f393a42d10f}} 
+\index{model::Boardgame@{model::Boardgame}!getSize@{getSize}}
+\index{getSize@{getSize}!model::Boardgame@{model::Boardgame}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily int Boardgame\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get\+Size donne la taille du plateau 
+
+\begin{DoxyReturn}{Returns}
+un entier représentant la taille 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmodel_1_1_boardgame_a57be9688de23926c7fdfa8f48bfbe627}\label{classmodel_1_1_boardgame_a57be9688de23926c7fdfa8f48bfbe627}} 
+\index{model::Boardgame@{model::Boardgame}!initboard@{initboard}}
+\index{initboard@{initboard}!model::Boardgame@{model::Boardgame}}
+\doxysubsubsection{\texorpdfstring{initboard()}{initboard()}}
+{\footnotesize\ttfamily void Boardgame\+::initboard (\begin{DoxyParamCaption}\item[{int}]{size,  }\item[{int}]{couleur }\end{DoxyParamCaption})}
+
+
+
+initboard \+: s\textquotesingle{}occupe de faire le travail du constructeur c\textquotesingle{}est à dire, crée des cases et les peindres en fonction de l\textquotesingle{}entier qui est associé à la couleur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & \+: la taille \\
+\hline
+{\em couleur} & la couleur des cases \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmodel_1_1_boardgame_aa10cd485ef5225bc69e504bebec4ec26}\label{classmodel_1_1_boardgame_aa10cd485ef5225bc69e504bebec4ec26}} 
+\index{model::Boardgame@{model::Boardgame}!isFinished@{isFinished}}
+\index{isFinished@{isFinished}!model::Boardgame@{model::Boardgame}}
+\doxysubsubsection{\texorpdfstring{isFinished()}{isFinished()}}
+{\footnotesize\ttfamily bool Boardgame\+::is\+Finished (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+is\+Finished regarde si toutes les cases ont la même couleur que celle en \mbox{[}0\mbox{]}\mbox{[}0\mbox{]} si c\textquotesingle{}est le cas c\textquotesingle{}est que le jeux est terminé 
+
+\begin{DoxyReturn}{Returns}
+true si c\textquotesingle{}est terminé, false si ce n\textquotesingle{}est pas le cas. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmodel_1_1_boardgame_a3287316789843fb61335c92b1a6e32e7}\label{classmodel_1_1_boardgame_a3287316789843fb61335c92b1a6e32e7}} 
+\index{model::Boardgame@{model::Boardgame}!setColors@{setColors}}
+\index{setColors@{setColors}!model::Boardgame@{model::Boardgame}}
+\doxysubsubsection{\texorpdfstring{setColors()}{setColors()}}
+{\footnotesize\ttfamily void Boardgame\+::set\+Colors (\begin{DoxyParamCaption}\item[{int}]{colors }\end{DoxyParamCaption})}
+
+
+
+set\+Colors permet d\textquotesingle{}installer une couleur pour une case. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em colors} & la couleur en question \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmodel_1_1_boardgame_a8bc983f714af3e306362ec0b214bad6f}\label{classmodel_1_1_boardgame_a8bc983f714af3e306362ec0b214bad6f}} 
+\index{model::Boardgame@{model::Boardgame}!updateBoard@{updateBoard}}
+\index{updateBoard@{updateBoard}!model::Boardgame@{model::Boardgame}}
+\doxysubsubsection{\texorpdfstring{updateBoard()}{updateBoard()}}
+{\footnotesize\ttfamily void Boardgame\+::update\+Board (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmodel_1_1_position}{Position}} $\ast$}]{pos }\end{DoxyParamCaption})}
+
+
+
+update\+Board cette méthode s\textquotesingle{}assure d\textquotesingle{}abord que la couleur séléctionné est bien différente de celle de la tâche ensuite elle fait appel à update\+Color et incrémente le nombre de tentative grace à \mbox{\hyperlink{classmodel_1_1_boardgame_a890b632c3f35ac532c05a59210c00565}{add\+Attempt()}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & la position de la case selectionné \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmodel_1_1_boardgame_a990b621352cb014333ace0de4d699084}\label{classmodel_1_1_boardgame_a990b621352cb014333ace0de4d699084}} 
+\index{model::Boardgame@{model::Boardgame}!UpdateColor@{UpdateColor}}
+\index{UpdateColor@{UpdateColor}!model::Boardgame@{model::Boardgame}}
+\doxysubsubsection{\texorpdfstring{UpdateColor()}{UpdateColor()}}
+{\footnotesize\ttfamily void Boardgame\+::\+Update\+Color (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j,  }\item[{int}]{row,  }\item[{int}]{column,  }\item[{Couleur}]{new\+Color }\end{DoxyParamCaption})}
+
+
+
+Update\+Color \+: prend cinq paramètres \+: i, j, row, col et new\+Color. Elle est appelée sur un objet de la classe \mbox{\hyperlink{classmodel_1_1_boardgame}{Boardgame}} et met à jour la couleur des cases du plateau de jeu à partir de la case de coordonnées (i,j). La nouvelle couleur à appliquer est passée en paramètre avec l\textquotesingle{}argument new\+Color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & abcisse du point courant \\
+\hline
+{\em j} & ordonnée du point courant \\
+\hline
+{\em row} & abcisse du point selectionné \\
+\hline
+{\em column} & ordonné du point selectionné \\
+\hline
+{\em new\+Color} & la couleur à appliquer \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+boardgame.\+h\item 
+boardgame.\+cpp\end{DoxyCompactItemize}

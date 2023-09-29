@@ -1,0 +1,61 @@
+\hypertarget{class_fichier}{}\doxysection{Fichier Class Reference}
+\label{class_fichier}\index{Fichier@{Fichier}}
+
+
+The \mbox{\hyperlink{class_fichier}{Fichier}} class cette classe gère les données à lire et écrire.  
+
+
+
+
+{\ttfamily \#include $<$fichier.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_fichier_ace018349629e9c136aff5421c1e72c4f}\label{class_fichier_ace018349629e9c136aff5421c1e72c4f}} 
+{\bfseries Fichier} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_fichier}{Fichier}} constructeur qui par défaut va instancier un objet pour lire et crée le vector de score. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_fichier_aa5d8f95d995372fbce9f2cc046bd1bec}{get\+List}} () const
+\begin{DoxyCompactList}\small\item\em get\+List retourne la liste des score. elle est disponible malgré la fermeture du fichier après l\textquotesingle{}instanciation des données. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fichier_a22878691b5634ca5c4eb9819fe96a27f}{write\+File}} (std\+::string score)
+\begin{DoxyCompactList}\small\item\em write\+File écrit le dernier score à ce jour. il faut redémmarré le jeux pour avoir l\textquotesingle{}affichage à jour. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_fichier}{Fichier}} class cette classe gère les données à lire et écrire. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_fichier_aa5d8f95d995372fbce9f2cc046bd1bec}\label{class_fichier_aa5d8f95d995372fbce9f2cc046bd1bec}} 
+\index{Fichier@{Fichier}!getList@{getList}}
+\index{getList@{getList}!Fichier@{Fichier}}
+\doxysubsubsection{\texorpdfstring{getList()}{getList()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ Fichier\+::get\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get\+List retourne la liste des score. elle est disponible malgré la fermeture du fichier après l\textquotesingle{}instanciation des données. 
+
+\begin{DoxyReturn}{Returns}
+vector de score 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fichier_a22878691b5634ca5c4eb9819fe96a27f}\label{class_fichier_a22878691b5634ca5c4eb9819fe96a27f}} 
+\index{Fichier@{Fichier}!writeFile@{writeFile}}
+\index{writeFile@{writeFile}!Fichier@{Fichier}}
+\doxysubsubsection{\texorpdfstring{writeFile()}{writeFile()}}
+{\footnotesize\ttfamily void Fichier\+::write\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{score }\end{DoxyParamCaption})}
+
+
+
+write\+File écrit le dernier score à ce jour. il faut redémmarré le jeux pour avoir l\textquotesingle{}affichage à jour. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em score} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+fichier.\+h\item 
+fichier.\+cpp\end{DoxyCompactItemize}

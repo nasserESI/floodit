@@ -1,0 +1,39 @@
+\hypertarget{squaregui_8h_source}{}\doxysection{squaregui.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SQUAREGUI\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SQUAREGUI\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <QPainter>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QWidget>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}couleur.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QPushButton>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QMouseEvent>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}position.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{keyword}{using\ namespace\ }model;}
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsquare_g_u_i}{squareGUI}}\ :\ \textcolor{keyword}{public}\ QPushButton}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ Q\_OBJECT}
+\DoxyCodeLine{00014\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00015\ \textcolor{comment}{//QPainter\ painter;}}
+\DoxyCodeLine{00016\ Couleur\ color;}
+\DoxyCodeLine{00017\ \textcolor{comment}{//QColor\ couleur;}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//QPaintEvent\ event;}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//QRect\ rect;}}
+\DoxyCodeLine{00020\ \mbox{\hyperlink{classmodel_1_1_position}{Position}}\ pos;}
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \ \mbox{\hyperlink{classsquare_g_u_i}{squareGUI}}(Couleur\ carre,\mbox{\hyperlink{classmodel_1_1_position}{Position}}\ position);}
+\DoxyCodeLine{00032\ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsquare_g_u_i_acb5f686e2ae153217753e9e9a4ad2cb0}{paintEvent}}(QPaintEvent\ *event)\textcolor{keyword}{override};}
+\DoxyCodeLine{00037\ \ \ \ \ \ \mbox{\hyperlink{classmodel_1_1_position}{Position}}\ \mbox{\hyperlink{classsquare_g_u_i_a818ca624ec344d1bb6f7cc241f04bb66}{getPos}}()\textcolor{keyword}{const};}
+\DoxyCodeLine{00038\ \ \ \ \ \ \mbox{\hyperlink{classsquare_g_u_i}{\string~squareGUI}}();}
+\DoxyCodeLine{00039\ signals:}
+\DoxyCodeLine{00040\ \ \ \ \ \ \textcolor{keywordtype}{void}\ click(\mbox{\hyperlink{classsquare_g_u_i}{squareGUI}}\ \&s);}
+\DoxyCodeLine{00041\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00047\ \ \ \ \ \ \textcolor{keywordtype}{void}\ on\_square\_pushed();}
+\DoxyCodeLine{00051\ \ \ \ \ \ \textcolor{keywordtype}{void}\ mouseClick();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SQUAREGUI\_H}}
+
+\end{DoxyCode}

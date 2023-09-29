@@ -1,0 +1,108 @@
+\hypertarget{class_main_window}{}\doxysection{Main\+Window Class Reference}
+\label{class_main_window}\index{MainWindow@{MainWindow}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{Main\+Window}} (QWidget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_main_window}{Main\+Window}} crée la fênetre principale. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a81d533ea1429337bf40508d1b8138f34}{Update}} (const \mbox{\hyperlink{class_subject}{Subject}} $\ast$subject) override
+\begin{DoxyCompactList}\small\item\em Update il apporte les mise à jour essentiel à la continuité du jeux. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_main_window_a9360a5a55bfe942e776744477efe84e0}{get\+Size}} () const
+\begin{DoxyCompactList}\small\item\em get\+Size getter de la taille du carrée GUI \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_main_window_ac175a1b4a5f3a404de2da810d77b00d9}{get\+Color}} () const
+\begin{DoxyCompactList}\small\item\em get\+Color getter du nombre de couleur selectionné par le user \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_fichier}{Fichier}} $\ast$ \mbox{\hyperlink{class_main_window_a31b746a2f40f88081fe216f4dc7707db}{get\+Data}} () const
+\begin{DoxyCompactList}\small\item\em get\+Data getter de l\textquotesingle{}objet qui traite le fichier \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_observer_af6480bb21571ec99ed9cf069b8ed2523}{Update}} (const \mbox{\hyperlink{class_subject}{Subject}} $\ast$subject)=0
+\begin{DoxyCompactList}\small\item\em Pure virtual method that each concrete observer must implement\+: it is this method that the observed subject calls when a notification. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_main_window_a996c5a2b6f77944776856f08ec30858d}\label{class_main_window_a996c5a2b6f77944776856f08ec30858d}} 
+\index{MainWindow@{MainWindow}!MainWindow@{MainWindow}}
+\index{MainWindow@{MainWindow}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{MainWindow()}{MainWindow()}}
+{\footnotesize\ttfamily Main\+Window\+::\+Main\+Window (\begin{DoxyParamCaption}\item[{QWidget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_main_window}{Main\+Window}} crée la fênetre principale. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & par défaut c\textquotesingle{}est un pointeur null car c\textquotesingle{}est la première fenêtre. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_main_window_ac175a1b4a5f3a404de2da810d77b00d9}\label{class_main_window_ac175a1b4a5f3a404de2da810d77b00d9}} 
+\index{MainWindow@{MainWindow}!getColor@{getColor}}
+\index{getColor@{getColor}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{getColor()}{getColor()}}
+{\footnotesize\ttfamily int Main\+Window\+::get\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get\+Color getter du nombre de couleur selectionné par le user 
+
+\begin{DoxyReturn}{Returns}
+un entier 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_main_window_a31b746a2f40f88081fe216f4dc7707db}\label{class_main_window_a31b746a2f40f88081fe216f4dc7707db}} 
+\index{MainWindow@{MainWindow}!getData@{getData}}
+\index{getData@{getData}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_fichier}{Fichier}} $\ast$ Main\+Window\+::get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get\+Data getter de l\textquotesingle{}objet qui traite le fichier 
+
+\begin{DoxyReturn}{Returns}
+un pointeur vers l\textquotesingle{}objet 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_main_window_a9360a5a55bfe942e776744477efe84e0}\label{class_main_window_a9360a5a55bfe942e776744477efe84e0}} 
+\index{MainWindow@{MainWindow}!getSize@{getSize}}
+\index{getSize@{getSize}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily int Main\+Window\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get\+Size getter de la taille du carrée GUI 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_main_window_a81d533ea1429337bf40508d1b8138f34}\label{class_main_window_a81d533ea1429337bf40508d1b8138f34}} 
+\index{MainWindow@{MainWindow}!Update@{Update}}
+\index{Update@{Update}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Update (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_subject}{Subject}} $\ast$}]{subject }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Update il apporte les mise à jour essentiel à la continuité du jeux. 
+
+\mbox{\hyperlink{class_main_window_a81d533ea1429337bf40508d1b8138f34}{Main\+Window\+::\+Update}} met à jours le jeux.
+
+
+\begin{DoxyParams}{Parameters}
+{\em subject} & \+:c\textquotesingle{}est le model\\
+\hline
+{\em subject} & c\textquotesingle{}esst le sujet d\textquotesingle{}observation donc le model et dans ce cas ci c\textquotesingle{}est la class Boardgame. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_observer_af6480bb21571ec99ed9cf069b8ed2523}{Observer}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+mainwindow.\+h\item 
+mainwindow.\+cpp\end{DoxyCompactItemize}

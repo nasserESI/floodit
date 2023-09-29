@@ -1,0 +1,45 @@
+\hypertarget{boardgame_8h_source}{}\doxysection{boardgame.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ "{}square.h"{}}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}position.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <array>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}subject.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ BOARDGAME\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ BOARDGAME\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }model\ \{}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmodel_1_1_boardgame}{Boardgame}}\ :\textcolor{keyword}{public}\ \mbox{\hyperlink{class_subject}{Subject}}}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{int}\ colors;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{int}\ size;}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{int}\ attempt;}
+\DoxyCodeLine{00020\ \ \ \ \ std::vector<std::vector<square>>\ board;}
+\DoxyCodeLine{00021\ \ \ \ \ std::set<Observer\ *>\ observers;}
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{classmodel_1_1_boardgame_af582c8f8720c66569cf763852b89faac}{Boardgame}}();}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{classmodel_1_1_boardgame_af582c8f8720c66569cf763852b89faac}{Boardgame}}(\textcolor{keywordtype}{int}\ size,\textcolor{keywordtype}{int}\ couleur);}
+\DoxyCodeLine{00037\ \ \ \ \ std::string\ \mbox{\hyperlink{classmodel_1_1_boardgame_a2156216faff78c2ea0fca60eb98d41a3}{getNumberOfAttempt}}()\textcolor{keyword}{const};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1_boardgame_a57be9688de23926c7fdfa8f48bfbe627}{initboard}}(\textcolor{keywordtype}{int}\ size,\textcolor{keywordtype}{int}\ couleur);}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1_boardgame_a990b621352cb014333ace0de4d699084}{UpdateColor}}(\textcolor{keywordtype}{int}\ i,\textcolor{keywordtype}{int}\ j,\textcolor{keywordtype}{int}\ row,\textcolor{keywordtype}{int}\ column,Couleur\ newColor);}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1_boardgame_a8bc983f714af3e306362ec0b214bad6f}{updateBoard}}(\mbox{\hyperlink{classmodel_1_1_position}{Position}}\ *pos);}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1_boardgame_a890b632c3f35ac532c05a59210c00565}{addAttempt}}();}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1_boardgame_a3287316789843fb61335c92b1a6e32e7}{setColors}}(\textcolor{keywordtype}{int}\ colors);}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classmodel_1_1_boardgame_affe94fd1efc62c3390997f393a42d10f}{getSize}}()\textcolor{keyword}{const};}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classmodel_1_1_boardgame_ae81b80e26d53764c73a919757558df3e}{color}}()\textcolor{keyword}{const};}
+\DoxyCodeLine{00091\ \ \ \ \ std::vector<std::vector<square>>\ \mbox{\hyperlink{classmodel_1_1_boardgame_ac7b05f5f217f91e6c5e4cbd8094cb44f}{getBoard}}()\textcolor{keyword}{const};}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classmodel_1_1_boardgame_aa10cd485ef5225bc69e504bebec4ec26}{isFinished}}()\textcolor{keyword}{const};}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \};}
+\DoxyCodeLine{00101\ \};}
+\DoxyCodeLine{00102\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ BOARDGAME\_H}}
+
+\end{DoxyCode}

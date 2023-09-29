@@ -1,0 +1,49 @@
+\hypertarget{initboard_8h_source}{}\doxysection{initboard.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ "{}ui\_mainwindow.h"{}}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}boardgame.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}QHBoxLayout"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}QGridLayout"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}squaregui.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}observer.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ INITBOARD\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ INITBOARD\_H}}
+\DoxyCodeLine{00010\ \textcolor{keyword}{using\ namespace\ }nvs;}
+\DoxyCodeLine{00011\ \textcolor{keyword}{using\ namespace\ }model;}
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classinit_board}{initBoard}}\ :\ \textcolor{keyword}{public}\ \ QHBoxLayout,\textcolor{keyword}{public}\ nvs::Observer}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00015\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{classmodel_1_1_boardgame}{model::Boardgame}}\ \&game;}
+\DoxyCodeLine{00017\ \ \ \ \ QGridLayout\ *\mbox{\hyperlink{classboard_g_u_i}{boardGUI}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00018\ \ \ \ \ QPushButton\ *startButton\ =\textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00019\ \ \ \ \ QGridLayout\ *playerPiece=\textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00020\ \ \ \ \ QWidget\ *\ window\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00021\ \ \ \ \ std::map<std::string,\ int>\ map\ ;}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{const}\ \ std::array<model::Couleur,12>\ Color\ =\{model::Couleur::BLUE,model::Couleur::BROWN,}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ model::Couleur::GREEN,model::Couleur::ORANGE,}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ model::Couleur::PINK\ ,model::Couleur::PURPLE,}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ model::Couleur::RED,model::Couleur::YELLOW\};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{classinit_board}{initBoard}}(\mbox{\hyperlink{classmodel_1_1_boardgame}{model::Boardgame}}\ \&game,QWidget\ *\ window\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ createBoard();}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ createPlayerPiece();}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//virtual\ void\ update(const\ nvs::Subject\ *\ subject)\ override;}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{int}\ countPieces();}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ updateBoard();}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ updatePlayerPiece();}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ select(view::squareGUI\ \&\mbox{\hyperlink{classmodel_1_1square}{square}});}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ move(view::squareGUI\ \&\ \mbox{\hyperlink{classmodel_1_1square}{square}});}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_startButton\_clicked();}
+\DoxyCodeLine{00042\ \};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ INITBOARD\_H}}
+
+\end{DoxyCode}
